@@ -18,15 +18,15 @@
 
             <p>
                  <label for="nama"><b>Nama</b></label>
-                 <input type="text" name="nama" placeholder="Nama Lengkap" />
+                 <input type="text" name="nama" placeholder="Nama Lengkap" required />
             </p>
             <p>
                  <label for="nama"><b>Alamat</b></label>
-                 <textarea name="Alamat"></textarea>
+                 <textarea name="alamat" required></textarea>
             </p>
             <p>
                  <label for="nama"><b>Jenis Kelamin</b></label>
-                 <label><input type="radio" name="jenis_kelamin" value="Laki-laki"> Laki-laki</label>
+                 <label><input type="radio" name="jenis_kelamin" value="Laki-laki" checked> Laki-laki</label>
                  <label><input type="radio" name="jenis_kelamin" value="Perempuan"> Perempuan</label>
             </p>
             <p>
@@ -41,7 +41,7 @@
             </p>
             <p>
                  <label for="nama"><b>Sekolah Asal</b></label>
-                 <input type="text" name="sekolah_asal" placeholder="Nama Sekolah" />
+                 <input type="text" name="sekolah_asal" placeholder="Nama Sekolah" required />
             </p>
             <p>
                  <input type="submit" value="Daftar" name="daftar" />
