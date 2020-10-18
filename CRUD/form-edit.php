@@ -24,36 +24,37 @@ if( mysqli_num_rows($query) < 1 ){
 
 <!DOCTYPE html>
 <html>
-<meta charset="utf-8">
-<link rel="stylesheet" href="form-daftar.css">
-<head>
-    <title>Formulir Edit Siswa | SMAN 1 KEJAYAN</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>>
+    <link rel="stylesheet" href="form-daftar.css">
+
+</style>
 </head>
-
 <body>
-    <header>
-        <h3>Formulir Edit Siswa</h3>
-    </header>
-
     <form action="proses-edit.php" method="POST">
+    <div class="container"> 
+         <h1>Edit Siswa Baru</h1>
 
         <fieldset>
 
             <input type="hidden" name="id" value="<?php echo $siswa['id'] ?>" />
 
         <p>
-            <label for="nama">Nama: </label>
-            <input type="text" name="nama" placeholder="nama lengkap" value="<?php echo $siswa['nama'] ?>" />
+            <label for="nama"><b>Nama</b></label>
+            <input type="text" name="nama" placeholder="Nama Lengkap" value="<?php echo $siswa['nama'] ?>" />
         </p>
         <p>
-            <label for="alamat">Alamat: </label>
+            <label for="nama"><b>Alamat</b></label>
             <textarea name="alamat"><?php echo $siswa['alamat'] ?></textarea>
         </p>
         <p>
-            <label for="jenis_kelamin">Jenis Kelamin: </label>
+            <label for="nama"><b>Jenis Kelamin</b></label>
             <?php $jk = $siswa['jenis_kelamin']; ?>
-            <label><input type="radio" name="jenis_kelamin" value="laki-laki" <?php echo ($jk == 'laki-laki') ? "checked": "" ?>> Laki-laki</label>
-            <label><input type="radio" name="jenis_kelamin" value="perempuan" <?php echo ($jk == 'perempuan') ? "checked": "" ?>> Perempuan</label>
+            <label><input type="radio" name="jenis_kelamin" value="Laki-laki" <?php echo ($jk == 'laki-laki') ? "checked": "" ?>> Laki-laki</label>
+            <label><input type="radio" name="jenis_kelamin" value="Perempuan" <?php echo ($jk == 'perempuan') ? "checked": "" ?>> Perempuan</label>
         </p>
         <p>
             <label for="agama">Agama: </label>
